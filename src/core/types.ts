@@ -1,0 +1,1 @@
+export type Cell = 0 | 'I'|'J'|'L'|'O'|'S'|'T'|'Z'; export type Grid = Cell[][]; export type RotationIndex = number; export type PieceKind = 'I'|'J'|'L'|'O'|'S'|'T'|'Z';
