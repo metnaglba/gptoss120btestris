@@ -136,7 +136,7 @@ export class GameScene extends Phaser.Scene {
     for (let y = 0; y < ROWS; y++) {
       for (let x = 0; x < COLUMNS; x++) {
         const cell = this.core.board.grid[y][x];
-        if (cell && cell !== 0) {
+        if (cell !== 0) {
           this.gfx.fillStyle(COLORS[cell], 1);
           this.gfx.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
         }

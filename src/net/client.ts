@@ -8,11 +8,10 @@ export interface INetworkClient {
 }
 
 export class DummyClient implements INetworkClient {
-  private handler: ((msg: ServerToClient) => void) | null = null;
-  async connect(url: string): Promise<void> { void url; /* no-op */ }
-  send(msg: ClientToServer): void { void msg; /* no-op */ }
-  onMessage(handler: (msg: ServerToClient) => void): void { this.handler = handler; }
-  close(): void { this.handler = null; }
+  async connect(_url: string): Promise<void> { /* no-op */ }
+  send(_msg: ClientToServer): void { /* no-op */ }
+  onMessage(_handler: (msg: ServerToClient) => void): void { /* no-op */ }
+  close(): void { /* no-op */ }
 }
 
 

@@ -39,7 +39,10 @@ export class GameCore {
   maxMoveResets = 15;
   nowMs = 0;
 
-  constructor(public settings: GameSettings = DIFFICULTY_MAP['Normal']) {
+  settings: GameSettings;
+
+  constructor(settings: GameSettings = DIFFICULTY_MAP['Normal']) {
+    this.settings = settings;
     this.fallSpeedMs = settings.fallSpeedMs;
     this.levelTimeMsBase = settings.levelTimeSec * 1000;
     this.remainingLevelMs = this.levelTimeMsBase;
